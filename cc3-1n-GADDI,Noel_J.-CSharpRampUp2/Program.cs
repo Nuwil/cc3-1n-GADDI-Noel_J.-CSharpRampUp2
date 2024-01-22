@@ -7,9 +7,9 @@ class RampUp2
         Console.WriteLine("====================================================\n\t\t\t\t   GADDI, Noel J.\n====================================================");
         double updateWeight, updateLength, updateFah;
 
-        bool tama = false;
+        bool Validation = false;
 
-        while (!tama)
+        while (!Validation)
         {
             Console.Write("Weights in Pounds (lbs): ");
             string userWeight = Console.ReadLine();
@@ -18,18 +18,18 @@ class RampUp2
                 updateWeight = double.Parse(userWeight);
                 double resultKilo = updateWeight * 0.45359237;
                 Console.WriteLine($"Weight Converted to Kilo (kg): {resultKilo}\n====================================================\n");
-                tama = true;
+                Validation = true;
             }
             catch (FormatException)
             {
                 Console.WriteLine(">>INVALID INPUT! PLEASE ENTER NUMBERS ONLY!");
-                tama = false;
+                Validation = false;
             }
         }
         //===========END OF WEIGHT CONVERTER=============//
 
-        tama = false;
-        while (!tama)
+        Validation = false;
+        while (!Validation)
         {
             Console.Write("Length in Miles (mi): ");
             string userLength = Console.ReadLine();
@@ -39,17 +39,18 @@ class RampUp2
                 updateLength = double.Parse(userLength);
                 double resultMiles = updateLength * 1.609344;
                 Console.WriteLine($"Length in Kilometers (km): {resultMiles}\n====================================================\n");
-                tama = true;
+                Validation = true;
             }
             catch (FormatException)
             {
                 Console.WriteLine(">>INVALID INPUT! PLEASE ENTER NUMBERS ONLY!");
+                Validation = false;
             }
         }
         //===========END OF LENGTH CONVERTER=============//
 
-        tama = false;
-        while (!tama)
+        Validation = false;
+        while (!Validation)
         {
             Console.Write("Temperature in Fahrenheit (*F): ");
             string userFah = Console.ReadLine();
@@ -59,17 +60,18 @@ class RampUp2
                 updateFah = double.Parse(userFah);
                 double resultCelcius = (updateFah - 32) * 5 / 9;
                 Console.WriteLine($"Temperature in Celsius (*C): {resultCelcius}\n====================================================\n");
-                tama = true;
+                Validation = true;
             }
             catch (FormatException)
             {
                 Console.WriteLine(">>INVALID INPUT! PLEASE ENTER NUMBERS ONLY!");
+                Validation = false;
             }
         }
         //===========END OF TEMPERATURE CONVERTER=============//
 
-        tama = false;
-        while (!tama)
+        Validation = false;
+        while (!Validation)
         {
             try
             {
@@ -86,12 +88,12 @@ class RampUp2
 
                 double average = sum / 10;
                 Console.WriteLine($"The average age of the Students is: {average:F2}\n====================================================\n");
-
-                tama = true;
+                Validation = true;
             }
             catch (FormatException)
             {
                 Console.WriteLine(">>INVALID INPUT! PLEASE ENTER NUMBERS ONLY!");
+                Validation = false;
             }
         }
         //===========END OF AVERAGE AGE OF STUDENT=============//
@@ -122,9 +124,9 @@ class RampUp2
         Console.WriteLine($"Once upon a time, in a far-off land, there lived five brave heroes named {char1} 'The Hammer' (equipped with {weaponNoel}), {char2} 'The Archer' (armed with {weaponGully}), {char3} 'The Brainiac' (with the {itemAlex}), {char4} 'The Sorceress' (wielding the {itemAngel}), and {char5} 'The Guardian' (clad in the {itemGorlock}). They were each skilled in different areas, such as {abNoel}, {abGully}, {abAlex}, {abAngel}, and {abGorlock}. Together, they embarked on a quest to defeat the evil sorcerer, {evilChar} (armed with the {weaponEvil}), who threatened to destroy their kingdom. Along the way, they encountered many challenges and obstacles but always found a way to overcome them thanks to their diverse skills and teamwork.\n");
         Console.WriteLine($"One day, while journeying through a dense forest, they stumbled upon a mysterious cave. As they ventured deeper into the darkness, they discovered an ancient treasure trove filled with powerful weapons and magical artifacts. But suddenly, {evilChar} appeared before them, wielding his {abEvil} and determined to claim the treasure for himself. The heroes knew they had to stop him at all costs. In a thrilling battle, they fought bravely against {evilChar} and his minions, using everything they had learned on their journey. With their combined might, they managed to defeat the villainous sorcerer and save the kingdom from destruction. The people rejoiced at their victory, hailing the five heroes as saviors of the realm. And so, they returned home, proud of their accomplishment and ready for whatever new adventures lay ahead. \n====================================================\n");
         //===========END OF STORY=============//
-
-        tama = false;
-        while (!tama)
+        //===========START OF PART 2============//
+        Validation = false;
+        while (!Validation)
         {
             Console.Write("Enter a number: ");
             string userNum = Console.ReadLine();
@@ -144,7 +146,7 @@ class RampUp2
                             Console.Write(o + " ");
                         }
                         Console.WriteLine();
-                        tama = true;
+                        Validation = true;
                     }
                     Console.WriteLine("====================================================\n");
                 }
@@ -152,14 +154,14 @@ class RampUp2
             else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
-                tama = false;
+                Validation = false;
             }
         }
         //===========END OF PATTERN 1=============//
 
 
-        tama = false;
-        while (!tama)
+        Validation = false;
+        while (!Validation)
         {
             Console.Write("Enter a number: ");
             string userNum = Console.ReadLine();
@@ -185,19 +187,19 @@ class RampUp2
                     }
                     Console.WriteLine();
                     Console.WriteLine($"Output: {sum}");
-                    tama = true;
+                    Validation = true;
                     Console.WriteLine("====================================================\n");
                 }
             }
             else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.\n");
-                tama = false;
+                Validation = false;
             }
         }
         //===========END OF PATTERN 2=============//
-        tama = false;
-        while (!tama)
+        Validation = false;
+        while (!Validation)
         {
             Console.Write("Enter a number: ");
             string userNum = Console.ReadLine();
@@ -217,7 +219,7 @@ class RampUp2
                             Console.Write(o + " ");
                         }
                         Console.WriteLine();
-                        tama = true;
+                        Validation = true;
                     }
                     Console.WriteLine("====================================================\n\t\t\t\tEND OF CSHARPRAMPUP\n====================================================");
                 }
@@ -225,7 +227,7 @@ class RampUp2
             else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
-                tama = false;
+                Validation = false;
             }
         }
         //===========END OF PATTERN 3=============//
