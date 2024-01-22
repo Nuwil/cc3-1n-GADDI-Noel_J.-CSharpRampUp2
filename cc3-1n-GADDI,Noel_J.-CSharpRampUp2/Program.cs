@@ -7,9 +7,9 @@ class RampUp2
         Console.WriteLine("====================================================\n\t\t\t\t   GADDI, Noel J.\n====================================================");
         double updateWeight, updateLength, updateFah;
 
-        bool validInput = false;
+        bool tama = false;
 
-        while (!validInput)
+        while (!tama)
         {
             Console.Write("Weights in Pounds (lbs): ");
             string userWeight = Console.ReadLine();
@@ -18,18 +18,18 @@ class RampUp2
                 updateWeight = double.Parse(userWeight);
                 double resultKilo = updateWeight * 0.45359237;
                 Console.WriteLine($"Weight Converted to Kilo (kg): {resultKilo}\n====================================================\n");
-                validInput = true;
+                tama = true;
             }
             catch (FormatException)
             {
                 Console.WriteLine(">>INVALID INPUT! PLEASE ENTER NUMBERS ONLY!");
-                validInput = false;
+                tama = false;
             }
         }
         //===========END OF WEIGHT CONVERTER=============//
 
-        validInput = false;
-        while (!validInput)
+        tama = false;
+        while (!tama)
         {
             Console.Write("Length in Miles (mi): ");
             string userLength = Console.ReadLine();
@@ -39,7 +39,7 @@ class RampUp2
                 updateLength = double.Parse(userLength);
                 double resultMiles = updateLength * 1.609344;
                 Console.WriteLine($"Length in Kilometers (km): {resultMiles}\n====================================================\n");
-                validInput = true;
+                tama = true;
             }
             catch (FormatException)
             {
@@ -48,8 +48,8 @@ class RampUp2
         }
         //===========END OF LENGTH CONVERTER=============//
 
-        validInput = false;
-        while (!validInput)
+        tama = false;
+        while (!tama)
         {
             Console.Write("Temperature in Fahrenheit (*F): ");
             string userFah = Console.ReadLine();
@@ -59,7 +59,7 @@ class RampUp2
                 updateFah = double.Parse(userFah);
                 double resultCelcius = (updateFah - 32) * 5 / 9;
                 Console.WriteLine($"Temperature in Celsius (*C): {resultCelcius}\n====================================================\n");
-                validInput = true;
+                tama = true;
             }
             catch (FormatException)
             {
@@ -68,8 +68,8 @@ class RampUp2
         }
         //===========END OF TEMPERATURE CONVERTER=============//
 
-        validInput = false;
-        while (!validInput)
+        tama = false;
+        while (!tama)
         {
             try
             {
@@ -87,7 +87,7 @@ class RampUp2
                 double average = sum / 10;
                 Console.WriteLine($"The average age of the Students is: {average:F2}\n====================================================\n");
 
-                validInput = true;
+                tama = true;
             }
             catch (FormatException)
             {
@@ -123,10 +123,10 @@ class RampUp2
         Console.WriteLine($"One day, while journeying through a dense forest, they stumbled upon a mysterious cave. As they ventured deeper into the darkness, they discovered an ancient treasure trove filled with powerful weapons and magical artifacts. But suddenly, {evilChar} appeared before them, wielding his {abEvil} and determined to claim the treasure for himself. The heroes knew they had to stop him at all costs. In a thrilling battle, they fought bravely against {evilChar} and his minions, using everything they had learned on their journey. With their combined might, they managed to defeat the villainous sorcerer and save the kingdom from destruction. The people rejoiced at their victory, hailing the five heroes as saviors of the realm. And so, they returned home, proud of their accomplishment and ready for whatever new adventures lay ahead. \n====================================================\n");
         //===========END OF STORY=============//
 
-        validInput = false;
-        while (!validInput)
+        tama = false;
+        while (!tama)
         {
-            Console.WriteLine("Enter a number: ");
+            Console.Write("Enter a number: ");
             string userNum = Console.ReadLine();
 
             if (int.TryParse(userNum, out int n))
@@ -144,7 +144,7 @@ class RampUp2
                             Console.Write(o + " ");
                         }
                         Console.WriteLine();
-                        validInput = true;
+                        tama = true;
                     }
                     Console.WriteLine("====================================================\n");
                 }
@@ -152,14 +152,14 @@ class RampUp2
             else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
-                validInput = false;
+                tama = false;
             }
         }
         //===========END OF PATTERN 1=============//
 
 
-        validInput = false;
-        while (!validInput)
+        tama = false;
+        while (!tama)
         {
             Console.Write("Enter a number: ");
             string userNum = Console.ReadLine();
@@ -185,21 +185,21 @@ class RampUp2
                     }
                     Console.WriteLine();
                     Console.WriteLine($"Output: {sum}");
-                    validInput = true;
+                    tama = true;
                     Console.WriteLine("====================================================\n");
                 }
             }
             else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.\n");
-                validInput = false;
+                tama = false;
             }
         }
         //===========END OF PATTERN 2=============//
-        validInput = false;
-        while (!validInput)
+        tama = false;
+        while (!tama)
         {
-            Console.WriteLine("Enter a number: ");
+            Console.Write("Enter a number: ");
             string userNum = Console.ReadLine();
 
             if (int.TryParse(userNum, out int n))
@@ -217,7 +217,7 @@ class RampUp2
                             Console.Write(o + " ");
                         }
                         Console.WriteLine();
-                        validInput = true;
+                        tama = true;
                     }
                     Console.WriteLine("====================================================\n\t\t\t\tEND OF CSHARPRAMPUP\n====================================================");
                 }
@@ -225,7 +225,7 @@ class RampUp2
             else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
-                validInput = false;
+                tama = false;
             }
         }
         //===========END OF PATTERN 3=============//
